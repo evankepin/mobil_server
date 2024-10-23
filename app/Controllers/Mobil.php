@@ -15,8 +15,9 @@ class Mobil extends ResourceController
 
     public function index()
     {
-        $data_Mobil = $this->mobilModel->findAll();
-        return $this->respond($data_mobil, 200, ['Content-Type' => 'application/json']);
+        $data_Mobil = $this->MobilModel->findAll();
+        //print_r($data_Mobil);
+        return $this->respond($data_Mobil, 200, '');
     }
     
     public function create()
@@ -24,6 +25,7 @@ class Mobil extends ResourceController
         $input_data = $this->request->getJSON(true);
         if ($input_data) {
         $data = [
+                'id_mobil'             => $input_data['id_mobil'] ?? '',
                 'nama_mobil'           => $input_data['nama_mobil'] ?? '',
                 'tipe_mobil'           => $input_data['tipe_mobil'] ?? '',
                 'tahun_mobil'          => $input_data['tahun_mobil'] ?? '',
@@ -33,7 +35,7 @@ class Mobil extends ResourceController
                 'status_mobil'         => $input_data['status_mobil'] ?? ''
                 ];
 
-            if ($this->mobilModel->saveMobil($data)) {
+            if ($this->MobilModel->saveMobil($data)) {
                 return $this->respondCreated(
                     ['status' => 'success', 'message' => 'Mobil berhasil ditambahkan']
                 )->setContentType('application/json');
@@ -76,16 +78,17 @@ class Mobil extends ResourceController
 
         if ($input_data) {
             $data = [
-                'nama_mobil'           => $input_data['nama'] ?? '',
-                'tipe_mobil'           => $input_data['alamat'] ?? '',
-                'tahun_mobil'          => $input_data['no_hp'] ?? '',
-                'plat_nomor'           => $input_data['username'] ?? '',
-                'warna_mobil'          => $input_data['password'] ?? '',
+                'id_mobil'             => $input_data['id_mobil'] ?? '',
+                'nama_mobil'           => $input_data['nama_mobil'] ?? '',
+                'tipe_mobil'           => $input_data['tipe_mobil'] ?? '',
+                'tahun_mobil'          => $input_data['tahun_mobil'] ?? '',
+                'plat_nomor'           => $input_data['plat_nomor'] ?? '',
+                'warna_mobil'          => $input_data['warna_mobil'] ?? '',
                 'harga_sewa_per_hari'  => $input_data['harga_sewa_per_hari'] ?? '',
                 'status_mobil'         => $input_data['status_mobil'] ?? ''
             ];
 
-            if ($this->mobilModel->update($id, $data)) {
+            if ($this->MobilModel->update($id, $data)) {
                 return $this->respond(['status' => 'success', 'message' => 'Mobil berhasil diperbarui'], 200, ['Content-Type' => 'application/json']);
             } else {
                 return $this->fail('Gagal memperbarui mobil', 400, ['Content-Type' => 'application/json']);
@@ -96,7 +99,7 @@ class Mobil extends ResourceController
     }
     public function delete($id = null)
     {
-        if ($this->mobilModel->delete($id)) {
+        if ($this->MobilModel->delete($id)) {
             return $this->respondDeleted(['status' => 'success', 'message' => 'Mobil berhasil dihapus'], 200, ['Content-Type' => 'application/json']);
         } else {
             return $this->fail('Gagal menghapus mobil', 400, ['Content-Type' => 'application/json']);

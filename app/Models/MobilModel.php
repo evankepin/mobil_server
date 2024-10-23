@@ -7,8 +7,8 @@ use CodeIgniter\Model;
 class MobilModel extends Model
 {
     Protected $table = 'tb_mobil'; 
-    protected $primaryKey = 'id';
-    protected $allowedFields = ['id', 'nama_mobil', 'tipe_mobil', 'tahun_mobil', 'plat_nomor', 'warna_mobil', 'harga_sewa_per_hari', 'status_mobil', 'created_at'];
+    protected $primaryKey = 'id_mobil';
+    protected $allowedFields = ['id_mobil', 'nama_mobil', 'tipe_mobil', 'tahun_mobil', 'plat_nomor', 'warna_mobil', 'harga_sewa_per_hari', 'status_mobil', 'created_at'];
 
 
     public function getMobil()

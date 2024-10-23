@@ -1,0 +1,121 @@
+CRITICAL - 2024-10-17 03:41:30 --> ErrorException: Undefined property: App\Controllers\Mobil::$mobilModel
+[Method: GET, Route: mobil]
+in APPPATH\Controllers\Mobil.php on line 18.
+ 1 APPPATH\Controllers\Mobil.php(18): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Mobil::$mobilModel', 'C:\\laragon\\www\\mobil_server\\app\\Controllers\\Mobil.php', 18)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Mobil->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mobil))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\mobil_server\\public\\index.php')
+CRITICAL - 2024-10-17 03:42:59 --> ErrorException: Undefined variable $data_mobil
+[Method: GET, Route: mobil]
+in APPPATH\Controllers\Mobil.php on line 19.
+ 1 APPPATH\Controllers\Mobil.php(19): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data_mobil', 'C:\\laragon\\www\\mobil_server\\app\\Controllers\\Mobil.php', 19)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Mobil->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mobil))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\mobil_server\\public\\index.php')
+CRITICAL - 2024-10-17 03:43:25 --> TypeError: CodeIgniter\RESTful\ResourceController::respond(): Argument #3 ($message) must be of type string, array given, called in C:\laragon\www\mobil_server\app\Controllers\Mobil.php on line 19
+[Method: GET, Route: mobil]
+in SYSTEMPATH\API\ResponseTrait.php on line 92.
+ 1 APPPATH\Controllers\Mobil.php(19): CodeIgniter\RESTful\ResourceController->respond([], 200, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Mobil->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mobil))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\mobil_server\\public\\index.php')
+CRITICAL - 2024-10-17 03:46:30 --> TypeError: CodeIgniter\RESTful\ResourceController::respond(): Argument #3 ($message) must be of type string, array given, called in C:\laragon\www\mobil_server\app\Controllers\Mobil.php on line 20
+[Method: GET, Route: mobil]
+in SYSTEMPATH\API\ResponseTrait.php on line 92.
+ 1 APPPATH\Controllers\Mobil.php(20): CodeIgniter\RESTful\ResourceController->respond([...], 200, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Mobil->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mobil))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\mobil_server\\public\\index.php')
+CRITICAL - 2024-10-17 03:49:41 --> TypeError: CodeIgniter\RESTful\ResourceController::respond(): Argument #3 ($message) must be of type string, array given, called in C:\laragon\www\mobil_server\app\Controllers\Mobil.php on line 20
+[Method: GET, Route: mobil]
+in SYSTEMPATH\API\ResponseTrait.php on line 92.
+ 1 APPPATH\Controllers\Mobil.php(20): CodeIgniter\RESTful\ResourceController->respond([...], 200, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Mobil->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mobil))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\mobil_server\\public\\index.php')
+CRITICAL - 2024-10-17 03:50:25 --> TypeError: CodeIgniter\RESTful\ResourceController::respond(): Argument #3 ($message) must be of type string, array given, called in C:\laragon\www\mobil_server\app\Controllers\Mobil.php on line 21
+[Method: GET, Route: mobil]
+in SYSTEMPATH\API\ResponseTrait.php on line 92.
+ 1 APPPATH\Controllers\Mobil.php(21): CodeIgniter\RESTful\ResourceController->respond([...], 200, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Mobil->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mobil))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\mobil_server\\public\\index.php')
+CRITICAL - 2024-10-17 03:50:27 --> TypeError: CodeIgniter\RESTful\ResourceController::respond(): Argument #3 ($message) must be of type string, array given, called in C:\laragon\www\mobil_server\app\Controllers\Mobil.php on line 21
+[Method: GET, Route: mobil]
+in SYSTEMPATH\API\ResponseTrait.php on line 92.
+ 1 APPPATH\Controllers\Mobil.php(21): CodeIgniter\RESTful\ResourceController->respond([...], 200, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Mobil->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mobil))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\mobil_server\\public\\index.php')
+CRITICAL - 2024-10-17 03:51:00 --> TypeError: CodeIgniter\RESTful\ResourceController::respond(): Argument #3 ($message) must be of type string, array given, called in C:\laragon\www\mobil_server\app\Controllers\Mobil.php on line 20
+[Method: GET, Route: mobil]
+in SYSTEMPATH\API\ResponseTrait.php on line 92.
+ 1 APPPATH\Controllers\Mobil.php(20): CodeIgniter\RESTful\ResourceController->respond([...], 200, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Mobil->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mobil))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\mobil_server\\public\\index.php')
+CRITICAL - 2024-10-17 04:53:42 --> ErrorException: Undefined property: App\Controllers\Mobil::$mobilModel
+[Method: POST, Route: mobil/store]
+in APPPATH\Controllers\Mobil.php on line 37.
+ 1 APPPATH\Controllers\Mobil.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Mobil::$mobilModel', 'C:\\laragon\\www\\mobil_server\\app\\Controllers\\Mobil.php', 37)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Mobil->create()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mobil))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\mobil_server\\public\\index.php')
+CRITICAL - 2024-10-17 04:54:28 --> ErrorException: Undefined property: App\Controllers\Mobil::$mobilModel
+[Method: POST, Route: mobil/store]
+in APPPATH\Controllers\Mobil.php on line 37.
+ 1 APPPATH\Controllers\Mobil.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Mobil::$mobilModel', 'C:\\laragon\\www\\mobil_server\\app\\Controllers\\Mobil.php', 37)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Mobil->create()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mobil))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\mobil_server\\public\\index.php')
+CRITICAL - 2024-10-17 05:02:07 --> ErrorException: Undefined property: App\Controllers\Mobil::$mobilModel
+[Method: POST, Route: mobil/store]
+in APPPATH\Controllers\Mobil.php on line 37.
+ 1 APPPATH\Controllers\Mobil.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Mobil::$mobilModel', 'C:\\laragon\\www\\mobil_server\\app\\Controllers\\Mobil.php', 37)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Mobil->create()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mobil))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\mobil_server\\public\\index.php')
