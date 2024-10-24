@@ -15,6 +15,5 @@ $routes->get('mobil/show', 'Mobil::show'); // Route untuk menampilkan data berda
 $routes->get('/mobil/data-mobil', 'Mobil::getMobilDataJson'); // Route untuk mendapatkan data mobil dalam format JSON
 $routes->post('mobil/update/(:num)', 'Mobil::update/$1'); // Route untuk mengupdate data berdasarkan id
 $routes->delete('mobil/delete/(:num)', 'Mobil::delete/$1'); // Route untuk menghapus data berdasarkan id
-$routes->get('/mobil/data-mobil', 'Mobil::getMobilDataJson'); // Route untuk mengit add gitdapatkan data mobil dalam format JSON
-
-/* $routes->get('mobil/delete/(:num)', 'Mobil::delete/$1'); */
+/* $routes->get('/mobil/data-mobil', 'Mobil::getMobilDataJson'); // Route untuk mengit add gitdapatkan data mobil dalam format JSON */
+$routes->get('mobil/delete/(:num)', 'Mobil::delete/$1');

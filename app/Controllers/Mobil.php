@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use App\Models\MobilModel;
 use CodeIgniter\RESTful\ResourceController;
+
 class Mobil extends ResourceController
 {
     protected $MobilModel;
@@ -16,15 +17,21 @@ class Mobil extends ResourceController
     public function index()
     {
         $data_Mobil = $this->MobilModel->findAll();
-        //print_r($data_Mobil);
-        return $this->respond($data_Mobil, 200, '');
+
+        // Kirimkan data ke view
+        $data = [
+            'mobil' => $data_Mobil // 'mobil' ini akan digunakan di view
+        ];
+
+        // Load view dan passing data
+        return view('mobil', $data); // pastikan view file bernama 'mobil.php'
     }
-    
+
     public function create()
     {
         $input_data = $this->request->getJSON(true);
         if ($input_data) {
-        $data = [
+            $data = [
                 'id_mobil'             => $input_data['id_mobil'] ?? '',
                 'nama_mobil'           => $input_data['nama_mobil'] ?? '',
                 'tipe_mobil'           => $input_data['tipe_mobil'] ?? '',
@@ -33,44 +40,33 @@ class Mobil extends ResourceController
                 'warna_mobil'          => $input_data['warna_mobil'] ?? '',
                 'harga_sewa_per_hari'  => $input_data['harga_sewa_per_hari'] ?? '',
                 'status_mobil'         => $input_data['status_mobil'] ?? ''
-                ];
+            ];
 
             if ($this->MobilModel->saveMobil($data)) {
                 return $this->respondCreated(
                     ['status' => 'success', 'message' => 'Mobil berhasil ditambahkan']
                 )->setContentType('application/json');
             } else {
-                return $this->fail(
-                    'Gagal menambah mobil', 
-                    400
-                )->setContentType('application/json');
+                return $this->fail('Gagal menambah mobil', 400)->setContentType('application/json');
             }
         } else {
-            return $this->fail(
-                'Invalid JSON input', 
-                400
-            )->setContentType('application/json');
-            }
-
+            return $this->fail('Invalid JSON input', 400)->setContentType('application/json');
+        }
     }
+
     public function show($id = null)
     {
-        $mobilmodel = new MobilModel();
-
-        $mobil = $mobilmodel->getMobilById($id);
+        $mobil = $this->MobilModel->getMobilById($id);
 
         return $this->response->setJSON($mobil);
     }
-    
+
     public function getMobil()
     {
-        $mobilModel = new MobilModel(); // Corrected variable name to match conventions
-
-        $mobils = $mobilModel->getMobil(); // Changed to match the correct variable name
+        $mobils = $this->MobilModel->getMobil();
 
         return $this->response->setJSON($mobils);
     }
-
 
     public function update($id = null)
     {
@@ -97,6 +93,7 @@ class Mobil extends ResourceController
             return $this->fail('Invalid JSON input', 400, ['Content-Type' => 'application/json']);
         }
     }
+
     public function delete($id = null)
     {
         if ($this->MobilModel->delete($id)) {
